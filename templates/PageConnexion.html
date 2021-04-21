@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Se connecter</title>
+    <link rel="stylesheet" href="../static/background.css">
+</head>
+<body>
+
+<h1> Connexion </h1>
+
+<form action="connexion" method="post">
+<h3> Identifiant</h3>
+
+
+
+<input name="id" type="text"/>
+
+<h3> Mot de passe</h3>
+
+<input type="password" name="motPasse" />
+
+<br><br>
+
+<input type="submit" value="Identification" name="soumettre">
+</form>
+
+{% if text %}
+
+    <p>Informations non valides</p>
+
+{% endif %}
+
+</body>
+</html>

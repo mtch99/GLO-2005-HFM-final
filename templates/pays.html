@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistiques sur les pays</title>
+    <link rel="stylesheet" type="text/css" href="../static/MonFichierStyleProjet.css">
+    <script src="../static/app.js"></script></head>
+<body>
+
+<p class="centre">Liste des déposants.</p>
+
+
+<!-- Sidebar -->
+<div class="sidebar">
+<a href=espece_global>Espèces</a>
+<a href=deposantGlobal>Déposants</a>
+<a href=pays>Pays</a>
+
+</div>
+
+<!-- Page content -->
+<div class="main">
+
+    <form action="search" method="get" method="post">
+        <input type="text" placeholder="nom" name="nomInput">
+        <select id="TriSelect" placeholder="Continent" onchange="diplayPaysInputBox()">
+            <!-- TODO
+            Fonction js qui ajoute les choix (option) en fonction de la bd dans la liste déroulante en fonction de la BD
+             -->
+         <option value="" selected disabled hidden>trier par</option>
+         <option value="Nbespeces">Nombre d'especes déposées</option>
+         <option value="NbGenres"> Nombre de genres déposés</option>
+        </select>
+    <input type="submit" value="search" name="searchButton" onclick="fetchEspeces()" >
+  </form>
+    {{table}}
+</div>
+
+
+
+
+</body>
+</html>

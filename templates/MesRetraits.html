@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portail</title>
+    <link rel="stylesheet" type="text/css" href="../static/MonFichierStyleProjet.css">
+    <script src="../static/app.js"></script></head>
+</head>
+<body>
+
+<p class="centre"> Mes Retraits</p>
+<div class="sidebar">
+
+<a href=goToDepots>Mes Dépôts</a>
+<a href=goToRetraits>Mes Retraits</a>
+<a href="Profil">Déposants</a>
+
+</div>
+
+<div class="main">
+
+<form action="depots" method="post">
+    <input type="text" placeholder="espèce" name="searchEspece">
+    <input type="submit" value="search" name="searchButton" onclick="fetchEspeces()" >
+</form>
+
+    <form action="search" method="post">
+        <input type="text" placeholder="espèce" id="especeInput">
+        <select id="genreInput" placeholder="Continent" onchange="diplayPaysInputBox()">
+         <option value="" selected >Tous les genres</option>
+         <option value="Genre1">Genre1</option>
+        </select>
+    <select id="genreInput" placeholder="Continent" onchange="diplayPaysInputBox()">
+        <option value="" selected >Tous les pays</option>
+        <option value="Pays1">Genre1</option>
+    </select>
+
+    <input type="submit" value="search" name="searchButton" onclick="fetchEspeces()" >
+    </form>
+
+
+    {{table}}
+
+
+</div>
+
+</body>
+</html>

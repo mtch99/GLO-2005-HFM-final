@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Page Base de donées</title>
+<link rel="stylesheet" type="text/css" href="../static/MonFichierStyleProjet.css">
+    <script src="../static/app.js"></script>
+</head>
+<body onload="SupprimerContenu()">
+
+<p class="centre">Base de données des Graines.</p>
+
+
+<!-- Sidebar -->
+<div class="sidebar">
+<a href=espece_global>Espèces</a>
+<a href=deposantGlobal>Déposants</a>
+<a href=Pays>Pays</a>
+
+</div>
+
+<!-- Page content -->
+<div class="main">
+
+    <form action="search" method="post">
+        <input type="text" placeholder="espèce" name="searchEspece">
+        <select id="ContinentList" placeholder="Continent" onchange="diplayPaysInputBox()">
+            <!-- TODO
+            Fonction js qui ajoute les choix (option) en fonction de la bd dans la liste déroulante en fonction de la BD
+             -->
+         <option value="" selected >All</option>
+         <option value="Amérique du Nord">Amérique du Nord</option>
+         <option value="Amérique du Sud"> Amérique du Sud</option>
+         <option value="Afrique">Afrique</option>
+         <option value="Asie">Asie</option>
+         <option value="Europe">Europe</option>
+         <option value="Antartique">Antartique</option>
+        </select>
+    <input type="select" placeholder="Pays" name="sortPays" onkeyup="">
+    <input type="submit" value="search" name="searchButton" onclick="fetchEspeces()" >
+    </form>
+
+
+
+        <!-- TODO
+        Fonction js
+        Options dérivent de continents,
+        -->
+
+
+
+    {{table}}
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

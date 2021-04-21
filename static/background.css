@@ -1,0 +1,21 @@
+
+body
+{
+  background: linear-gradient(black, cyan);
+}
+
+h1{
+    color: cyan;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   width: 1000px;
+    height: 700px;
+    border: 20px solid #002;
+    -webkit-border-radius: 120px / 240px;
+    -moz-border-radius:    120px / 240px;
+    border-radius:         120px / 240px;
+}

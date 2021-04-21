@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<html>
+<head>
+<title>Page Base de donées</title>
+<link rel="stylesheet" type="text/css" href="../static/MonFichierStyleProjet.css">
+    <script src="../static/app.js"></script>
+</head>
+<body onload="SupprimerContenu()">
+
+<p class="centre">Base de données des Graines.</p>
+
+
+<!-- Sidebar -->
+<div class="sidebar">
+<a href=espece_global>Espèces</a>
+<a href=deposantGlobal>Déposants</a>
+
+
+</div>
+
+<!-- Page content -->
+<div class="main">
+
+    <form id = "form" action="triEspece" method="post">
+        <input type="text" placeholder="espèce" name="especeInput">
+        <select id="ContinentList" placeholder="Continent" onchange="get_pays_de_continent()" name="continentInput">
+            <!-- TODO
+            Fonction js qui ajoute les choix (option) en fonction de la bd dans la liste déroulante en fonction de la BD
+             -->
+         <option value="" selected disabled hidden>None</option>
+         <option value="Africa">Afrique</option>
+         <option value=Antarctica> Antartique</option>
+         <option value="Asia">Asie</option>
+         <option value="Europe">Europe</option>
+         <option value="North America">Amérique du Nord</option>
+         <option value="Oceania">Océanie</option>
+         <option value="South America">Amérique du Sud</option>
+         <option value="Unknown">Source inconnue</option>
+        </input>
+
+    <!-- <input type="select" placeholder="Pays" name="sortPays" onkeyup=""> -->
+    <input type="submit" value="search" name="searchButton">
+    </form>
+        <!-- TODO
+        Fonction js
+        Options dérivent de continents,
+        -->
+     {{table}}
+
+</div>
+
+
+
+
+
+
+</body>
+</html>

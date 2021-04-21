@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des déposants</title>
+    <link rel="stylesheet" type="text/css" href="../static/MonFichierStyleProjet.css">
+    <script src="../static/app.js"></script>
+</head>
+<body>
+
+<p class="centre">Liste des déposants.</p>
+
+
+<!-- Sidebar -->
+<div class="sidebar">
+<a href=espece_global>Espèces</a>
+<a href=deposantGlobal>Déposants</a>
+
+
+</div>
+
+<!-- Page content -->
+<div class="main">
+
+    <form action="triDeposant" method="post" method="get">
+        <input type="text" placeholder="nom" name="nomInput">
+        <input type="text" placeholder="ville" name="villeInput">
+        <select name="triInput" placeholder="Trier par">
+            <!-- TODO
+            Fonction js qui ajoute les choix (option) en fonction de la bd dans la liste déroulante en fonction de la BD
+             -->
+         <option value=""selected disabled hidden>trier par</option>
+         <option value="nombreEspeceDepose">Nombre d'especes déposées</option>
+         <option value="nombreGenreDepose"> Nombre de genres déposés</option>
+         <option value="nombreGraineDepose">Nombre de graines déposées</option>
+        </select>
+    <input type="submit" value="search" name="searchButton" onclick="fetchEspeces()" >
+  </form>
+
+   {{table}}
+
+</div>
+
+</body>
+
+
+</html>
